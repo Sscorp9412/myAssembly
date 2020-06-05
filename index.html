@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>css</title>
+    <link rel="stylesheet" href="./style.css" />
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+      }
+      body {
+        background: linear-gradient(
+            rgba(34, 34, 34, 0.739),
+            rgba(34, 34, 34, 0.781)
+          ),
+          url("./adult-blur-camera-dirt-road-610293.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+
+      .head {
+        width: 100vw;
+        height: 25vh;
+        background: rgb(12, 12, 75);
+      }
+
+      .heading {
+        color: white;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        text-align: center;
+        padding-top: 1em;
+        font-size: 3em;
+        position: static;
+      }
+
+      .main {
+        width: 80vw;
+        border: 0.4em solid grey;
+        padding: 1em;
+        margin: 0 auto;
+        text-align: center;
+      }
+      .image {
+        width: 100%;
+        max-width: 320px;
+      }
+
+      .content {
+        color: white;
+        text-align: center;
+        font-size: 1.5em;
+      }
+
+      li {
+        text-decoration: none;
+        list-style: none;
+        margin: 0.5em;
+        border: 0.2em solid grey;
+        text-align: center;
+        padding: 1em;
+        color: white;
+        font-family: "Times New Roman", Times, serif;
+        font-size: 2em;
+      }
+
+      .foot {
+        width: 100vw;
+        background: rgb(12, 12, 75);
+        /* height: 20vh; */
+        text-align: center;
+        color: white;
+        font-size: 1.1em;
+        padding-top: 0.5em;
+        padding-bottom: 2em;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="head">
+      <h1 class="heading">Sharma Construction</h1>
+    </div>
+    <div class="main">
+      <img
+        src="https://scontent.fdel3-1.fna.fbcdn.net/v/t1.0-9/15032741_155684894899544_7405142213094770628_n.jpg?_nc_cat=109&_nc_sid=174925&_nc_oc=AQlpTG6Rd0XraZAgLZBuhXExN0qqGylcFPCU2JltUkJindj2yHAvIxllU8_dZlGH5-ZMt3vKM4gnmBm2W96lrq8q&_nc_ht=scontent.fdel3-1.fna&oh=ac9acb331425158aa1e59d287dedd948&oe=5EFED0A1"
+        alt="image"
+        class="image"
+      />
+      <p class="content">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facilis quo
+        nihil excepturi molestias obcaecati deserunt architecto tenetur possimus
+        minus repellendus in iste, quasi numquam ipsum, exercitationem magnam
+        eligendi aperiam. Alias tenetur reprehenderit distinctio illo, velit
+        quis quidem accusantium ducimus nostrum.
+      </p>
+    </div>
+    <ul>
+      <li>ploting</li>
+      <li>construction</li>
+      <li>buying</li>
+      <li>selling</li>
+    </ul>
+    <div class="foot">
+      <h3>CONTACT US:</h3>
+      <p>
+        Add: opp. balaji mandir <br />,near akansha garden, <br />
+        adarsh nagar <br />Kashipur(244713),U.S.Nagar
+        <br />
+        8057722933
+        <br />sharmanischay23@gmail.com
+      </p>
+      <input type="text" name="" id="feedback" placeholder="Phone No." />
+      <input type="button" value="send" />
+    </div>
+  </body>
+</html>
