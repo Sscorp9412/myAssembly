@@ -3,9 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>css</title>
+    <title>Sharma Constuctions</title>
     <link rel="stylesheet" href="./style.css" />
     <style>
+      /* ----------@IMPORT-------------------------- */
+
+      @import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500&display=swap");
+      /* -------------end--------------------------- */
       * {
         margin: 0px;
         padding: 0px;
@@ -16,41 +20,120 @@
             rgba(34, 34, 34, 0.739),
             rgba(34, 34, 34, 0.781)
           ),
-          url("./adult-blur-camera-dirt-road-610293.jpg");
+          url("https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSii_3o2pQkrVOXf1CDkoksAzvdDnUF-hOpUMTn5EVB-NIuTTJv&usqp=CAU");
         background-repeat: no-repeat;
         background-size: cover;
       }
 
       .head {
-        width: 100vw;
+        width: 100%;
         height: 25vh;
         background: rgb(12, 12, 75);
+        /* position: relative; */
+        text-align: center;
       }
 
       .heading {
-        color: white;
-        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
         text-align: center;
-        padding-top: 1em;
+        color: white;
+        font-family: "Barlow Condensed", sans-serif;
         font-size: 3em;
-        position: static;
+        animation: color 5s infinite;
+      }
+
+      @keyframes color {
+        0% {
+          color: yellow;
+        }
+
+        25% {
+          color: red;
+        }
+        50% {
+        }
+
+        75% {
+          color: green;
+        }
+
+        100% {
+          color: cyan;
+        }
+      }
+
+      .box {
+        width: 10%;
+        height: 20%;
+        background: cyan;
+        animation: move 5s infinite;
+      }
+
+      @keyframes move {
+        0% {
+          transform: translateX(0%);
+          background: yellow;
+        }
+
+        25% {
+          transform: translateX(44vw);
+          background: red;
+        }
+        50% {
+          transform: translateX(89vw);
+        }
+
+        75% {
+          transform: translateX(44vw);
+          background: green;
+        }
+
+        100% {
+          transform: translateX(0%);
+          background: cyan;
+        }
+      }
+
+      .box2 {
+        width: 100%;
+        height: 20%;
+        background: cyan;
+        animation: move2 5s infinite;
+      }
+      @keyframes move2 {
+        0% {
+          background: yellow;
+        }
+
+        25% {
+          background: red;
+        }
+        50% {
+        }
+
+        75% {
+          background: green;
+        }
+
+        100% {
+          background: cyan;
+        }
       }
 
       .main {
-        width: 80vw;
+        min-height: 480px;
         border: 0.4em solid grey;
         padding: 1em;
         margin: 0 auto;
         text-align: center;
       }
       .image {
+        border-radius: 0.5em;
         width: 100%;
         max-width: 320px;
       }
 
       .content {
         color: white;
-        text-align: center;
         font-size: 1.5em;
       }
 
@@ -64,10 +147,15 @@
         color: white;
         font-family: "Times New Roman", Times, serif;
         font-size: 2em;
+        transition: background 1s ease;
+      }
+
+      li:hover {
+        background: grey;
       }
 
       .foot {
-        width: 100vw;
+        width: 100%;
         background: rgb(12, 12, 75);
         /* height: 20vh; */
         text-align: center;
@@ -76,11 +164,60 @@
         padding-top: 0.5em;
         padding-bottom: 2em;
       }
+      .button {
+        width: 5em;
+        height: 2em;
+        margin: 0.2em;
+        padding: 0.3em 1em 0.3em 1em;
+        border-radius: 0.3em;
+        text-decoration: none;
+        color: darkblue;
+        background: cyan;
+      }
+
+      .button:hover {
+        color: darkturquoise;
+        background: blue;
+      }
+
+      /* --------------MEDIA QUERIES------------------------- */
+
+      @media screen and (min-width: 476px) {
+        .heading {
+          left: 12%;
+        }
+        .main {
+          border: 0.4em solid grey;
+          padding: 1em;
+          margin: 0 auto;
+        }
+        .image {
+          border-radius: 0.5em;
+          width: 100%;
+          max-width: 320px;
+          float: left;
+        }
+      }
+
+      @media screen and (min-width: 1080px) {
+        .content {
+          width: 50%;
+          height: 46vh;
+          border: 0.3em solid grey;
+          color: white;
+          font-size: 1.5em;
+          display: inline-block;
+        }
+      }
+
+      /* --------------END----------------------------------- */
     </style>
   </head>
   <body>
     <div class="head">
       <h1 class="heading">Sharma Construction</h1>
+      <div class="box"></div>
+      <div class="box2"></div>
     </div>
     <div class="main">
       <img
@@ -89,11 +226,20 @@
         class="image"
       />
       <p class="content">
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facilis quo
-        nihil excepturi molestias obcaecati deserunt architecto tenetur possimus
-        minus repellendus in iste, quasi numquam ipsum, exercitationem magnam
-        eligendi aperiam. Alias tenetur reprehenderit distinctio illo, velit
-        quis quidem accusantium ducimus nostrum.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora nostrum
+        at ratione aliquid modi, voluptatibus exercitationem natus ipsa
+        asperiores vel culpa veniam? Facere maiores hic quis? Eius quod iure,
+        nulla id non, possimus et rerum praesentium ullam ea debitis. Minus
+        nobis quos dolorem! Exercitationem, eos. Fuga, magni maxime? Beatae
+        rerum sequi dignissimos dolorem iure perferendis. Labore consequuntur
+        eius culpa et sapiente quisquam id minus accusantium mollitia sed porro
+        voluptates, molestiae amet dicta, totam nisi sequi provident enim
+        voluptate ducimus debitis tenetur autem! Similique expedita,
+        reprehenderit officiis nulla voluptates rerum itaque debitis culpa ipsam
+        iusto impedit inventore totam mollitia, at assumenda quisquam cumque.
+        Delectus atque, corporis animi nostrum, ad possimus, esse eius natus
+        placeat facere alias dolores maxime quaerat. Voluptate obcaecati ipsam
+        velit accusamus omnis facilis reprehenderit consequuntur laudantium.
       </p>
     </div>
     <ul>
@@ -112,7 +258,11 @@
         <br />sharmanischay23@gmail.com
       </p>
       <input type="text" name="" id="feedback" placeholder="Phone No." />
-      <input type="button" value="send" />
+      <a
+        href="https://sscorp9412.github.io/myAssembly/index.html"
+        class="button"
+        >send</a
+      >
     </div>
   </body>
 </html>
