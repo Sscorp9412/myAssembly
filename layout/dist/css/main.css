@@ -1,6 +1,18 @@
 body {
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.719)), to(rgba(255, 254, 254, 0.5))), url("../images/back3.jpg");
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0.719), rgba(255, 254, 254, 0.5)), url("../images/back3.jpg");
+  background: -webkit-gradient(
+      linear,
+      left top,
+      left bottom,
+      from(rgba(0, 0, 0, 0.719)),
+      to(rgba(255, 254, 254, 0.5))
+    ),
+    url("../images/back3.jpg");
+  background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.719),
+      rgba(255, 254, 254, 0.5)
+    ),
+    url("../images/back3.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -11,8 +23,8 @@ nav {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
 }
 
 nav div a {
@@ -21,8 +33,8 @@ nav div a {
   font-size: 1.5rem;
   font-weight: 400;
   color: grey;
-  -webkit-transition: all .8s ease-in-out;
-  transition: all .8s ease-in-out;
+  -webkit-transition: all 0.8s ease-in-out;
+  transition: all 0.8s ease-in-out;
 }
 
 nav div a:hover {
@@ -34,7 +46,7 @@ main {
   overflow: hidden;
   text-align: center;
   -webkit-transform: translateY(30vh);
-          transform: translateY(30vh);
+  transform: translateY(30vh);
 }
 
 main .container {
@@ -43,11 +55,11 @@ main .container {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   padding: 0;
   margin: 0;
   border-bottom: 2px solid #fff;
@@ -62,6 +74,7 @@ main .container h2 {
 
 main .container .title {
   font-size: 5rem;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 main .container .title::after {
@@ -83,7 +96,7 @@ footer {
   right: 0;
   font-size: 1.5rem;
   font-weight: 700;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   background: #f3f0d0;
   color: rgba(0, 0, 0, 0.253);
 }
