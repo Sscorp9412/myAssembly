@@ -2,83 +2,121 @@
 
 body {
   background: linear-gradient(
-      180deg,
-      rgba(0, 0, 0, 0.719),
-      rgba(255, 254, 254, 0.5)
+      45deg,
+      rgba(0, 0, 0, 0.904),
+      rgba(218, 217, 216, 0.479)
     ),
     url("../images/back3.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: 20%;
   background-attachment: fixed;
 }
 
-nav {
-  display: flex;
-  justify-content: space-evenly;
+main {
+  width: 100%;
+  overflow: hidden;
+  text-align: center;
 
-  div {
-    a {
-      text-decoration: none;
-      font-family: "MuseoModerno";
-      font-size: 1.5rem;
-      font-weight: 400;
-      color: grey;
-      transition: all .8s ease-in-out;
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    border-bottom: 2px solid #fff;
 
-      &:hover {
-        color: $secondary-color;
+    h2 {
+      padding: 0;
+      margin: 0;
+      font-size: 2rem;
+      color: white;
+    }
+    .title {
+      font-size: 3rem;
+      font-family: "oxygen";
+
+      &::after {
+        content: "N.S.";
+        color: $primary-color;
       }
+    }
+  }
+
+  .cont {
+    font-size: 1rem;
+    font-weight: 600;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+    margin-top: 0;
+
+    &::after {
+      content: " . ";
     }
   }
 }
 
-main{
-    width: 100%;
-    overflow: hidden;
-    text-align: center;
-    transform:  translateY(30vh);
+footer {
+  width: 98%;
+  // border:  2px solid magenta;
+  position: absolute;
+  bottom: 35px;
+  overflow: hidden;
+  nav {
+    display: flex;
+    flex-direction: column;
 
-    .container{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 0;
-        margin:  0;
-        border-bottom: 2px solid #fff ;
-        
-        h2{
-            padding: 0;
-            margin:  0;
-            font-size: 2rem;
-            color: white;
+    div {
+      margin-bottom: 1em;
+
+      a {
+        text-decoration: none;
+        font-family: "MuseoModerno";
+        font-size: 2rem;
+        font-weight: 400;
+        color: $text-color;
+        transition: all 0.8s ease-in-out;
+        outline: none;
+
+        &:hover {
+          color: $secondary-color;
         }
-        .title{
-            font-size: 5rem;
-
-            &::after{
-                content:"N.S.";
-                color: $primary-color;
-            }
-        }
+      }
+      & .visited {
+        color: $secondary-color;
+        border-bottom: 2px solid $primary-color;
+        padding-bottom: -1px;
+      }
     }
+  }
 
-    .cont{
-        font-size: 1.2rem;
-        font-weight: 600;
-        font-family: sans-serif;
-        color: white;
-        margin-top: 0;
-    }
-}
-
-footer{
+  & .copy {
     position: absolute;
-    bottom: 0;
+    bottom: -15px;
     right: 0;
-    font-size: 1.5rem;
-    font-weight: 700;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: rgb(243, 240, 208);
-    color: rgba(0, 0, 0, 0.253);
+    font-size: 1em;
+    color: $text-color;
+  }
 }
 
+@media screen and (min-width: 540px) {
+  main {
+    & .container {
+      align-items: flex-end;
+
+      & .title_one {
+        transform: translateX(-50%);
+      }
+    }
+
+    & .sub {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+
+      .cont {
+        font-size: 1.5rem;
+      }
+    }
+  }
+}
