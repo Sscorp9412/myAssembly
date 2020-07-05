@@ -1,15 +1,65 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 body {
-  background: linear-gradient(45deg, rgba(0, 0, 0, 0.904), rgba(218, 217, 216, 0.479)), url("../images/back3.jpg");
+  background: -webkit-gradient(linear, right top, left top, from(rgba(255, 254, 254, 0.3)), to(rgba(0, 0, 0, 0.9))), url("../images/back.jpg");
+  background: linear-gradient(270deg, rgba(255, 254, 254, 0.3), rgba(0, 0, 0, 0.9)), url("../images/back.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: 20%;
+  background-position: 25%;
   background-attachment: fixed;
 }
 
-main {
+header {
+  background: rgba(0, 0, 0, 0.5);
   width: 100%;
   overflow: hidden;
+}
+
+header nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+header nav div {
+  margin-bottom: 1em;
+}
+
+header nav div a {
+  text-decoration: none;
+  font-family: "MuseoModerno", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: white;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+  outline: none;
+}
+
+header nav div a:hover {
+  color: #ff00dd;
+}
+
+header nav div .visited {
+  color: #ff00dd;
+  border-bottom: 2px solid #38fafa;
+  padding-bottom: -1px;
+}
+
+main {
   text-align: center;
+  margin: 70% 0 60% 0;
 }
 
 main .container {
@@ -20,9 +70,9 @@ main .container {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
   padding: 0;
   margin: 0;
   border-bottom: 2px solid #fff;
@@ -33,11 +83,12 @@ main .container h2 {
   margin: 0;
   font-size: 2rem;
   color: white;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 main .container .title {
   font-size: 3rem;
-  font-family: "oxygen";
+  font-family: "oxygen", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 main .container .title::after {
@@ -46,9 +97,9 @@ main .container .title::after {
 }
 
 main .cont {
-  font-size: 1rem;
+  font-size: 1.1rem;
   font-weight: 600;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: white;
   margin-top: 0;
 }
@@ -58,79 +109,64 @@ main .cont::after {
 }
 
 footer {
-  width: 98%;
-  position: absolute;
-  bottom: 35px;
-  overflow: hidden;
+  width: 100%;
+  padding: 0.5em;
+  position: fixed;
+  bottom: 0;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
 }
 
-footer nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-footer nav div {
-  margin-bottom: 1em;
-}
-
-footer nav div a {
+footer .social-icons a {
+  font-size: 0.8rem;
+  margin: 0 .4em;
   text-decoration: none;
-  font-family: "MuseoModerno";
-  font-size: 2rem;
-  font-weight: 400;
-  color: #494545;
-  -webkit-transition: all 0.8s ease-in-out;
-  transition: all 0.8s ease-in-out;
-  outline: none;
-}
-
-footer nav div a:hover {
-  color: #811673;
-}
-
-footer nav div .visited {
-  color: #811673;
-  border-bottom: 2px solid #38fafa;
-  padding-bottom: -1px;
+  color: white;
 }
 
 footer .copy {
-  position: absolute;
-  bottom: -15px;
-  right: 0;
-  font-size: 1em;
-  color: #494545;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 600;
+  font-family: "MuseoModerno", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  text-align: end;
 }
 
-@media screen and (min-width: 540px) {
-  main .container {
-    -webkit-box-align: end;
-        -ms-flex-align: end;
-            align-items: flex-end;
+@media screen and (min-width: 768px) {
+  header {
+    width: 100%;
+    opacity: 0;
+    -webkit-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
   }
-  main .container .title_one {
-    -webkit-transform: translateX(-50%);
-            transform: translateX(-50%);
+  header:hover {
+    opacity: 1;
+    background: rgba(70, 70, 70, 0.7);
   }
-  main .sub {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
+  header nav {
+    -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: end;
-        -ms-flex-align: end;
-            align-items: flex-end;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
   }
-  main .sub .cont {
-    font-size: 1.5rem;
+  main {
+    margin: 40vh 0 10vh 0;
+  }
+  main .container h2 {
+    font-size: 3rem;
+  }
+  main .container .title {
+    font-size: 5rem;
   }
 }
 /*# sourceMappingURL=main.css.map */

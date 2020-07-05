@@ -1,81 +1,44 @@
 @import "var";
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   background: linear-gradient(
-      45deg,
-      rgba(0, 0, 0, 0.904),
-      rgba(218, 217, 216, 0.479)
+      270deg,
+      rgba(255, 254, 254, 0.3),
+      rgba(0, 0, 0, 0.9)
     ),
-    url("../images/back3.jpg");
+    url("../images/back.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: 20%;
+  background-position: 25%;
   background-attachment: fixed;
 }
-
-main {
+header {
+  background: rgba(0, 0, 0, 0.5);
   width: 100%;
-  overflow: hidden;
-  text-align: center;
-
-  .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 0;
-    margin: 0;
-    border-bottom: 2px solid #fff;
-
-    h2 {
-      padding: 0;
-      margin: 0;
-      font-size: 2rem;
-      color: white;
-    }
-    .title {
-      font-size: 3rem;
-      font-family: "oxygen";
-
-      &::after {
-        content: "N.S.";
-        color: $primary-color;
-      }
-    }
-  }
-
-  .cont {
-    font-size: 1rem;
-    font-weight: 600;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color: white;
-    margin-top: 0;
-
-    &::after {
-      content: " . ";
-    }
-  }
-}
-
-footer {
-  width: 98%;
-  // border:  2px solid magenta;
-  position: absolute;
-  bottom: 35px;
   overflow: hidden;
   nav {
     display: flex;
-    flex-direction: column;
+    align-items: center;
+    // flex-direction: column;
+    justify-content: space-evenly;
 
     div {
       margin-bottom: 1em;
 
       a {
         text-decoration: none;
-        font-family: "MuseoModerno";
-        font-size: 2rem;
+        font-family: "MuseoModerno", "Segoe UI", Tahoma, Geneva, Verdana,
+          sans-serif;
+        font-size: 1.2rem;
         font-weight: 400;
         color: $text-color;
-        transition: all 0.8s ease-in-out;
+        transition: all 0.4s ease-in-out;
         outline: none;
 
         &:hover {
@@ -89,33 +52,104 @@ footer {
       }
     }
   }
+}
 
-  & .copy {
-    position: absolute;
-    bottom: -15px;
-    right: 0;
-    font-size: 1em;
-    color: $text-color;
+main {
+  text-align: center;
+  margin: 70% 0 60% 0;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 0;
+    margin: 0;
+    border-bottom: 2px solid #fff;
+
+    h2 {
+      padding: 0;
+      margin: 0;
+      font-size: 2rem;
+      color: white;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .title {
+      font-size: 3rem;
+      font-family: "oxygen", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+
+      &::after {
+        content: "N.S.";
+        color: $primary-color;
+      }
+    }
+  }
+
+  .cont {
+    font-size: 1.1rem;
+    font-weight: 600;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+    margin-top: 0;
+
+    &::after {
+      content: " . ";
+    }
   }
 }
 
-@media screen and (min-width: 540px) {
-  main {
-    & .container {
-      align-items: flex-end;
-
-      & .title_one {
-        transform: translateX(-50%);
-      }
+footer {
+  width: 100%;
+  padding: 0.5em;
+  position: fixed;
+  bottom: 0;
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  
+  
+  .social-icons{
+    a{
+      font-size: 0.8rem;
+      margin: 0 .4em;
+      text-decoration: none;
+      color: white;
     }
+  }
+  & .copy {
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 600;
+    font-family: "MuseoModerno", "Segoe UI", Tahoma, Geneva, Verdana,
+    sans-serif;
+    text-align: end;
+  }
+}
 
-    & .sub {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-end;
+@media screen and (min-width: 768px) {
+  header {
+    width: 100%;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+    &:hover {
+      opacity: 1;
+      background: rgba(70, 70, 70, 0.7);
+      // overflow: hidden;
+    }
+    nav {
+      flex-direction: row;
+      justify-content: space-evenly;
+    }
+  }
 
-      .cont {
-        font-size: 1.5rem;
+  main {
+    margin: 40vh 0 10vh 0;
+
+    .container {
+      h2 {
+        font-size: 3rem;
+      }
+      .title {
+        font-size: 5rem;
       }
     }
   }
