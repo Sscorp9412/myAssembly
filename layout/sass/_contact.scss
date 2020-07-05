@@ -1,0 +1,61 @@
+main{
+    .contact_container{
+        margin-left: 1.5em;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        
+        div{
+            background:rgba(0, 0, 0, 0.5);
+            padding: .7em;
+            margin: .5em 0;
+            h2{
+                font-size: 1rem;
+                color: $text-color;
+                font-weight: 400;
+
+                font-family:roboto ;
+                span{
+                    color: $primary-color;
+                }
+            }
+        }
+        .name{
+            h2{
+                font-size: 2rem;
+            }
+
+        }
+    }
+}
+
+@media screen and (min-width: 768px){
+    main{
+        .contact_container{
+            div{
+                margin:0.8em 0;
+                h2{
+                    font-size: 1.5rem;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 480px)
+{
+        main{
+            height: 50vh;
+            background: rgba(0, 0, 0, 0.5);
+        .contact_container{
+            div{
+                background: none;
+                margin-top:.5em;
+                padding: 0;
+                h2{
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+}

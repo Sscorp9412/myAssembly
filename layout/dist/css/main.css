@@ -1,3 +1,62 @@
+main .contact_container {
+  margin-left: 1.5em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+main .contact_container div {
+  background: rgba(0, 0, 0, 0.5);
+  padding: .7em;
+  margin: .5em 0;
+}
+
+main .contact_container div h2 {
+  font-size: 1rem;
+  color: white;
+  font-weight: 400;
+  font-family: roboto;
+}
+
+main .contact_container div h2 span {
+  color: #38fafa;
+}
+
+main .contact_container .name h2 {
+  font-size: 2rem;
+}
+
+@media screen and (min-width: 768px) {
+  main .contact_container div {
+    margin: 0.8em 0;
+  }
+  main .contact_container div h2 {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  main {
+    height: 50vh;
+    background: rgba(0, 0, 0, 0.5);
+  }
+  main .contact_container div {
+    background: none;
+    margin-top: .5em;
+    padding: 0;
+  }
+  main .contact_container div h2 {
+    font-size: 1rem;
+  }
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -6,18 +65,20 @@
 }
 
 body {
-  background: -webkit-gradient(linear, right top, left top, from(rgba(255, 254, 254, 0.3)), to(rgba(0, 0, 0, 0.9))), url("../images/back.jpg");
-  background: linear-gradient(270deg, rgba(255, 254, 254, 0.3), rgba(0, 0, 0, 0.9)), url("../images/back.jpg");
+  background: -webkit-gradient(linear, right top, left top, from(rgba(255, 254, 254, 0)), to(rgba(0, 0, 0, 0.5))), url("../images/back6.jpg");
+  background: linear-gradient(270deg, rgba(255, 254, 254, 0), rgba(0, 0, 0, 0.5)), url("../images/back6.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: 25%;
+  background-position: right;
   background-attachment: fixed;
 }
 
 header {
+  position: fixed;
+  display: inline;
   background: rgba(0, 0, 0, 0.5);
   width: 100%;
-  overflow: hidden;
+  top: 0;
 }
 
 header nav {
@@ -38,7 +99,7 @@ header nav div {
 
 header nav div a {
   text-decoration: none;
-  font-family: "MuseoModerno", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "MuseoModerno", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-size: 1.2rem;
   font-weight: 400;
   color: white;
@@ -59,7 +120,7 @@ header nav div .visited {
 
 main {
   text-align: center;
-  margin: 70% 0 60% 0;
+  margin-top: 50vh;
 }
 
 main .container {
@@ -70,9 +131,9 @@ main .container {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   padding: 0;
   margin: 0;
   border-bottom: 2px solid #fff;
@@ -135,11 +196,15 @@ footer .copy {
   color: white;
   font-size: 1.2rem;
   font-weight: 600;
-  font-family: "MuseoModerno", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "MuseoModerno", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   text-align: end;
 }
 
 @media screen and (min-width: 768px) {
+  body {
+    background-position: bottom;
+    background-position: bottom 20%;
+  }
   header {
     width: 100%;
     opacity: 0;
