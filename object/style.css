@@ -35,7 +35,10 @@ input[type="submit"],[type="reset"]{
     color: white;
     border-radius: 0.5em;
 }
-input[type="submit"],[type="reset"]:active{
+input[type="reset"]:active{
+    box-shadow: 1px 1px white;
+}
+input[type="submit"]:active{
     box-shadow: 1px 1px white;
 }
 h1{
