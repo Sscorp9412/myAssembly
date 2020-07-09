@@ -1,42 +1,29 @@
 main .contact_container {
-  margin-left: 1.5em;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-}
-
-main .contact_container div {
-  background: rgba(0, 0, 0, 0.5);
-  padding: .7em;
-  margin: .5em 0;
+  text-align: left;
+  position: absolute;
+  z-index: 2;
+  top: 0%;
+  left: 5%;
+  -webkit-transform: translateY(50%);
+          transform: translateY(50%);
 }
 
 main .contact_container div h2 {
-  font-size: 1rem;
-  color: white;
-  font-weight: 400;
+  font-size: 1.5rem;
+  color: springgreen;
   font-family: roboto;
 }
 
 main .contact_container div h2 span {
-  color: #38fafa;
+  color: white;
 }
 
 main .contact_container .name h2 {
-  font-size: 2rem;
+  font-size: 3rem;
+  color: #fff;
 }
 
 @media screen and (min-width: 768px) {
-  main .contact_container div {
-    margin: 0.8em 0;
-  }
   main .contact_container div h2 {
     font-size: 1.5rem;
   }
@@ -45,20 +32,57 @@ main .contact_container .name h2 {
 @media screen and (max-width: 480px) {
   main {
     height: 50vh;
-    background: rgba(0, 0, 0, 0.5);
+  }
+  main .contact_container {
+    -webkit-transform: translateY(30%);
+            transform: translateY(30%);
   }
   main .contact_container div {
-    background: none;
-    margin-top: .5em;
-    padding: 0;
+    margin-top: 0.5em;
+    padding: .2em;
   }
   main .contact_container div h2 {
     font-size: 1rem;
   }
 }
 
+main .about_container {
+  position: absolute;
+  z-index: 2;
+  background: rgba(0, 0, 0, 0.4);
+  top: 7em;
+  padding: 1em .5em;
+}
+
+main .about_container h1 {
+  font-family: satisfy;
+  color: #ff00dd;
+}
+
+main .about_container p {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 1rem;
+  font-weight: 200;
+  color: springgreen;
+  text-align: left;
+}
+
+@media screen and (min-width: 768px) {
+  main .about_container p {
+    font-size: 1.5rem;
+  }
+}
+
+main .project-container .title {
+  font-family: oxygen;
+  font-size: 2rem;
+  color: springgreen;
+  background: rgba(0, 0, 0, 0.2);
+  padding: .5em;
+}
+
 * {
-  margin: 0;
+  margin: 1;
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -69,16 +93,16 @@ body {
   background: linear-gradient(270deg, rgba(255, 254, 254, 0), rgba(0, 0, 0, 0.5)), url("../images/back6.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: right;
+  background-position: 95%;
   background-attachment: fixed;
 }
 
 header {
   position: fixed;
-  display: inline;
   background: rgba(0, 0, 0, 0.5);
   width: 100%;
   top: 0;
+  left: 0;
 }
 
 header nav {
@@ -99,7 +123,7 @@ header nav div {
 
 header nav div a {
   text-decoration: none;
-  font-family: "MuseoModerno", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "MuseoModerno", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-size: 1.2rem;
   font-weight: 400;
   color: white;
@@ -114,7 +138,7 @@ header nav div a:hover {
 
 header nav div .visited {
   color: #ff00dd;
-  border-bottom: 2px solid #38fafa;
+  border-bottom: 2px solid springgreen;
   padding-bottom: -1px;
 }
 
@@ -154,7 +178,7 @@ main .container .title {
 
 main .container .title::after {
   content: "N.S.";
-  color: #38fafa;
+  color: springgreen;
 }
 
 main .cont {
@@ -182,7 +206,7 @@ footer {
           justify-content: space-between;
   -webkit-box-align: end;
       -ms-flex-align: end;
-          align-items: flex-end;
+          align-items: end;
 }
 
 footer .social-icons a {
@@ -192,11 +216,17 @@ footer .social-icons a {
   color: white;
 }
 
+footer .social-icons a:hover {
+  color: #ff00dd;
+}
+
 footer .copy {
+  -webkit-transform: translateY(18px);
+          transform: translateY(18px);
   color: white;
   font-size: 1.2rem;
   font-weight: 600;
-  font-family: "MuseoModerno", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "MuseoModerno", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   text-align: end;
 }
 
