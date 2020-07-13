@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="./script.js"></script>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="page">
+      <header>
+        <div class="heading">
+          <h1 class="title1">Calculator</h1>
+          <h1 class="title2">SCORP INC.</h1>
+          <h3 class="sub_title">A way to represent data</h3>
+        </div>
+      </header>
+      <main>
+        <input type="text" name="Input" id="input" placeholder="0" />
+      </main>
+      <footer>
+        <table>
+          <tr class="row1">
+            <td class="numbers" data-num="7">7</td>
+            <td class="numbers" data-num="8">8</td>
+            <td class="numbers"  data-num="9">9</td>
+            <td class="numbers"  data-num="+" >+</td>
+            <td class="numbers" data-num="C">C</td>
+          </tr>
+          <tr class="row2">
+            <td class="numbers"  data-num="4">4</td>
+            <td class="numbers" data-num="5">5</td>
+            <td class="numbers" data-num="6">6</td>
+            <td class="numbers"data-num="*">x</td>
+            <td class="numbers" data-num="back"><</td>
+          </tr>
+          <tr class="row3">
+            <td class="numbers" data-num="1">1</td>
+            <td class="numbers"  data-num="2">2</td>
+            <td class="numbers" data-num="3">3</td>
+            <td class="numbers" data-num="/">/</td>
+            <td class="numbers" id="big_row" rowspan="2" data-num="=">=</td>
+          </tr>
+          <tr class="row4">
+            <td class="numbers" id="big_col" colspan="2" data-num="0">0</td>
+            <td class="numbers" data-num=".">.</td>
+            <td class="numbers"data-num="-">-</td>
+          </tr>
+        </table>
+      </footer>
+    </div>
+  </body>
+</html>
