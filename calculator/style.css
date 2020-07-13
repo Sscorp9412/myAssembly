@@ -99,7 +99,7 @@ td:active{
   }
 }
 
-@media screen and (max-height: 600px),(max-width:360px)
+@media screen and (max-height: 600px),(min-width:240px)
 {
   input{
     padding-top: 3em;
