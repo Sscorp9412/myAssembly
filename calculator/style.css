@@ -27,7 +27,7 @@ header {
     margin: 1em 0;
 
 }
-h1 {
+.title1 {
   font-family: "Comfortaa", "Segoe UI";
   /* transform: translateX(5%); */
 }
