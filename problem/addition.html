@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solve it?</title>
+    <!-- React,ReactDOM,Babel -->
+
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+
+    <!-- end -->
+
+    <!-- styesheet -->
+    <style>
+        *{
+            color: #fff;
+            font-size: 1rem;
+            font-family: sans-serif;
+        }
+        body{
+            background: linear-gradient(270deg,rgb(0, 234, 255),rgb(98, 0, 255));
+        }
+        #app{
+            text-align: center;
+        }
+        #problem{
+            margin: 0.2em;
+            font-size: 5rem;
+        }
+        input{
+            font-size: 1em;
+            color: rgba(0,0,0);
+        }
+    </style>
+</head>
+<body>
+    <div id="app"></div>
+
+    <script type="text/babel">
+    const difficulty=100;
+
+        class App extends React.Component{
+
+            constructor(props){
+                super(props);
+                this.state={
+                    score: 0,
+                    num1: Math.ceil(Math.random()*difficulty),
+                    num2: Math.ceil(Math.random()*difficulty),
+                    response: ""
+                };
+            }
+
+            render(){
+                if(this.state.score==10)
+                return(
+                    <div> 
+                        <h3 id="problem">Won</h3>
+                    </div>
+                );
+            
+            else{
+                return(
+                    <div>
+                    <h1 id="title">Solve it?</h1>
+                    <h2 id="problem">{this.state.num1}+{this.state.num2}</h2>
+                    <input onKeyPress={this.onkeypress} onChange={this.updateResponse} value={this.state.response} placeholder="Answer"/>
+                    <h3>Score: {this.state.score}</h3>
+                    </div>
+                );
+            }
+        }
+
+            updateResponse=(event)=>{
+                this.setState({
+                    response: event.target.value
+                });
+            }
+            
+            onkeypress=(event)=>{
+            if(event.key=== 'Enter')
+            {
+                const answer=parseInt(this.state.response);
+                if(answer=== this.state.num1+this.state.num2)
+                {
+                    //correct answer
+                    this.setState(state=>({
+                        score: state.score+1,
+                        num1:Math.ceil(Math.random()*difficulty),
+                        num2:Math.ceil(Math.random()*difficulty),
+                        response: ""
+                    }));
+                }
+                else {
+                    //wrong answer
+                    if(this.state.score>0)
+                    {
+                        this.setState(state=>({
+                        score: state.score-1,
+                        num1:Math.ceil(Math.random()*difficulty),
+                        num2:Math.ceil(Math.random()*difficulty),
+                        response: ""
+                    }));
+                    }
+                }
+            }
+        }
+    }
+
+        ReactDOM.render(<App />,document.querySelector('#app'));
+    </script>
+</body>
+</html>
