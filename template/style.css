@@ -1,0 +1,115 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: rgb(32, 32, 32);
+    
+}
+
+header{
+    margin: 1em;
+}
+.title{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: rgb(38, 190, 0);
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+main{
+    min-height: 60vh;
+}
+
+.form_h1{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color:  rgb(38, 190, 0);
+}
+
+form{
+    margin: 0 auto;
+    margin-top: 25vh;
+    width: 25%;
+    min-width: 360px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+   
+}
+
+form input{
+    background: none;
+    border: none;
+   border: 2px solid rgb(38, 190, 0);
+   color:  #fff;
+   padding: 0.5em;
+   font-size: 1.5rem;
+   margin: 0.3em;
+}
+.username_p{
+    /* color: rgb(136, 165, 129); */
+    color: rgb(126, 126, 126);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    /* font-weight: 400; */
+    font-size: 2rem;
+}
+.form_submit{
+    align-self: flex-start;
+    margin: 0 auto;
+    padding: 0.5em 2em;
+    transition: all .5s ease-in-out;
+}
+.form_submit:hover{
+    background: rgba(38, 190, 0, 0.5);
+}
+.form_submit:active{
+    background: rgba(51, 255, 0, 0.5);
+}
+.forgot_password{
+    color: rgba(126, 126, 126, 0.8);
+    text-align: center;
+    font-size: 1.1rem;
+    margin: 0.2em;
+    text-decoration: underline;
+}
+
+footer{
+    width: 100%;
+    /* position: absolute; */
+    bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+footer .footer{
+    color: rgba(126,126,126,0.5);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.2rem;
+
+}
+
+.one{
+    margin: 0.5em;
+}
+.two{
+    margin-left:auto; 
+    margin-right: 0.5em;
+}
+
+@media  screen and (min-width: 768px){
+
+    .title{
+        text-align: left;
+    }
+    form{
+        min-width: 480px;
+        box-shadow: 1px 1px 8px rgb(0, 0, 0);
+        padding: 6em 1em;
+    }
+   footer .footer{
+        font-size: 1.5rem;
+    }
+}
+
