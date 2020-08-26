@@ -41,12 +41,9 @@ document.addEventListener("DOMContentLoaded", () => {
             alert("Welcome Nishu\nFirewall Break:\nGo to next Open Port");
           } else if (passcode == "anu" || passcode == "mikku") {
             alert("I love You");
-          }
-          else if(passcode=="maanvi" || passcode=="charu")
-          {
+          } else if (passcode == "maanvi" || passcode == "charu") {
             alert("Name identified: My Most Lovely Sister");
-          }
-          else if (
+          } else if (
             passcode == "manjula" ||
             passcode == "anusmita" ||
             passcode == "nimboo"
