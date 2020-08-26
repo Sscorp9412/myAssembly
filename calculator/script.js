@@ -14,6 +14,66 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   };
 
+
+
+//                                               DARK MODE
+  //  ===================================================
+  // ===================================================
+  var night_mode=false;
+  const night_bar=document.querySelector('.controller_base');
+  const night_button=document.querySelector('.controller_button');
+  const night_icon=document.querySelector('#night_mode');
+
+  // FUNCTION
+  night_bar.onclick=()=>{
+    if(!night_mode)
+    {
+      night_button.style.transform="translateX(25px)";
+      night_button.style.transition="all 0.5s ease-out";
+      night_bar.style.background="orangered";
+      night_icon.style.color="yellow";
+      // INPUT FIELD
+      document.querySelector('input').style.background="black";
+    document.querySelector('input').style.color="white";
+    // BODY
+    document.body.style.background="black";
+    document.body.style.color="white";
+    // td
+    document.querySelector('td').style.background="black";
+    document.querySelector('td').style.color="white";
+    // PAGE
+    document.querySelector('.page').style.borderColor="white";
+
+      night_mode=true;
+    }
+    else
+    {
+      night_button.style.transform="translateX(0px)";
+      night_bar.style.background="grey";
+      night_icon.style.color="black";
+      // INPUT FIELD
+      document.querySelector('input').style.background="#fff";
+     document.querySelector('input').style.color="black";
+    //  BODY
+    document.body.style.background="none";
+    document.body.style.color="black";
+    // td
+     document.querySelector('td').style.background="white";
+     document.querySelector('td').style.color="black";
+    // PAGE
+    document.querySelector('.page').style.borderColor="grey";
+      night_mode=false;
+    }
+  }
+// ===============================================
+// =================DARK MODE====================
+  // ==============================================
+
+
+
+
+
+
   document.querySelector("#input").value = "";
   document.querySelectorAll(".numbers").forEach(function (element) {
     element.onclick = () => {
@@ -27,38 +87,23 @@ document.addEventListener("DOMContentLoaded", () => {
 
       if (value == "c" || value == "C") {
         input.value = "";
+        input.style.fontSize="2.7rem";
         display = 0;
       } else if (value == "=") {
         if (input.value == "2+2+9412" && mode == 1) {
-          var passcode = prompt("Passcode");
+          var passcode = prompt("help ?\n(Ex: Version Control, latest update)");
           passcode = passcode.toLowerCase();
           if (
-            passcode == "nischay" ||
-            passcode == "Gagan" ||
-            passcode == "muddy" ||
-            passcode == "aridane"
+            passcode == "version control" 
           ) {
-            alert("Welcome Nishu\nFirewall Break:\nGo to next Open Port");
-          } else if (passcode == "anu" || passcode == "mikku") {
+            alert("Version: 1.2 beta \nLanguage: ECMAScript6\nEngine : Spider Monkey \nCopyrights: Scorp Industies");
+          }else if(passcode== "latest update" || passcode=="update"){
+            alert("1. Enhanced Mobile Compatibility.\n2.New Feature: Dark Mode \n3. New help and Support.");
+          } 
+          else if (passcode == "mikku") {
             alert("I love You");
-          } else if (passcode == "maanvi" || passcode == "charu") {
-            alert("Name identified: My Most Lovely Sister");
-          } else if (
-            passcode == "manjula" ||
-            passcode == "anusmita" ||
-            passcode == "nimboo"
-          ) {
-            alert("My Life :" + passcode + ",Port:5050,'Welcome to Scorp'");
-          } else if (
-            passcode == "shero" ||
-            passcode == "ankur" ||
-            passcode == "deepak" ||
-            passcode == "shantanu"
-          ) {
-            alert("Friends\naccess Granted\nWelcome to Scorp");
-          } else if (passcode == "samakshi" || passcode == "sam") {
-            alert("My Love: Dear Samakshi,Welcome to SCORP");
-          } else {
+          } 
+           else {
             alert("Security checkup failed");
             mode = 0;
             document.querySelector(".title1").innerHTML = "Calculator";
